@@ -2,43 +2,52 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
 	<!-- 数据库驱动包位置 -->
-	<!-- <classPathEntry location="D:\eclipseWorkspace\repository\ojdbc14.jar" />-->
-	<classPathEntry location="E:\中软\包\mysql-connector-java-5.1.42-bin.jar" />
+	 <classPathEntry location="D:\maven\ojdbc14.jar" />
+	<!-- <classPathEntry location="E:\中软\包\mysql-connector-java-5.1.42-bin.jar" /> -->
 	<context id="DB2Tables" targetRuntime="MyBatis3">
         
-        <!--mysql 分页  -->
-        <plugin type="org.leef.db.mybatis.plugin.mysql.PaginationPlugin" />   
-        <!--  <plugin type="org.leef.db.mybatis.plugin.oracle.OraclePaginationPlugin" /> -->       
+        <!--mysql 分页  
+        <plugin type="org.leef.db.mybatis.plugin.mysql.PaginationPlugin" />  --> 
+        <plugin type="org.leef.db.mybatis.plugin.oracle.OraclePaginationPlugin" />     
 		<commentGenerator>
 			<property name="suppressAllComments" value="true" />
 		</commentGenerator>
 		<!-- 数据库链接URL、用户名、密码 -->
-		 <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/yaopin" userId="root" password="root"> 
+		<!-- <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/yaopin" userId="root" password="root">  --> 
 		<!-- <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@localhost:1521:bs" userId="bs" password="123456"> -->
-		<!--  <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:erecord" userId="trff_app" password="trff_app">-->
+		  <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@127.0.0.1:1521:ORCL" userId="hgcj" password="hgcj1234">
 		</jdbcConnection>
 		
 		<javaTypeResolver>
 			<property name="forceBigDecimals" value="false" />
 		</javaTypeResolver>
 		<!-- 生成模型的包名和位置 -->
-		<javaModelGenerator targetPackage="com.yaopin.bean" targetProject="F:\sousouxc">
+		<javaModelGenerator targetPackage="com.hgkj.bean" targetProject="F:\sousouxc">
 			<property name="enableSubPackages" value="true" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 		<!-- 生成的映射文件包名和位置 -->
-		<sqlMapGenerator targetPackage="com.yaopin.mapping" targetProject="F:\sousouxc">
+		<sqlMapGenerator targetPackage="com.hgkj.mapping" targetProject="F:\sousouxc">
 			<property name="enableSubPackages" value="true" />
 		</sqlMapGenerator>
 		<!-- 生成DAO的包名和位置 -->
-		<javaClientGenerator type="XMLMAPPER" targetPackage="com.yaopin.dao" targetProject="F:\sousouxc">
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.hgkj.dao" targetProject="F:\sousouxc">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 		<!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
 
-<table tableName="kehu" domainObjectName="kehu" enableCountByExample="true" enableUpdateByExample="true" 
+<table tableName="TB_18C81_A1" domainObjectName="TB_18C81_A1" enableCountByExample="true" enableUpdateByExample="true" 
 		 enableDeleteByExample="true" enableSelectByExample="false" selectByExampleQueryId="true"  />
-		 
+		 <table tableName="TB_18C81_B4" domainObjectName="TB_18C81_B4" enableCountByExample="true" enableUpdateByExample="true" 
+		 enableDeleteByExample="true" enableSelectByExample="false" selectByExampleQueryId="true"  />
+		 <table tableName="TB_18C81_B5" domainObjectName="TB_18C81_B5" enableCountByExample="true" enableUpdateByExample="true" 
+		 enableDeleteByExample="true" enableSelectByExample="false" selectByExampleQueryId="true"  />
+		 <table tableName="TB_18C81_H2" domainObjectName="TB_18C81_H2" enableCountByExample="true" enableUpdateByExample="true" 
+		 enableDeleteByExample="true" enableSelectByExample="false" selectByExampleQueryId="true"  />
+		 <table tableName="TB_18C81_H3" domainObjectName="TB_18C81_H3" enableCountByExample="true" enableUpdateByExample="true" 
+		 enableDeleteByExample="true" enableSelectByExample="false" selectByExampleQueryId="true"  />
+		 <table tableName="TB_18C81_L" domainObjectName="TB_18C81_L" enableCountByExample="true" enableUpdateByExample="true" 
+		 enableDeleteByExample="true" enableSelectByExample="false" selectByExampleQueryId="true"  />
 		<!--  <table tableName="FILE_RECORD" domainObjectName="FileRecord" enableCountByExample="true" enableUpdateByExample="true" 
 		 enableDeleteByExample="true" enableSelectByExample="true" selectByExampleQueryId="true"  />
 		 
